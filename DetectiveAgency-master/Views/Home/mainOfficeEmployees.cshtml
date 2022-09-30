@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "ABC Corporation Staff";
+    string[] staff = { "Freddie Flintstone", "Barney Rubble", "Betty Rubble", "Wilma Flintstone" };
+    int staffLen = staff.Length;
+    string[] managers = { "Pebbles Flintstone", "Johnny Quest", "Shaggy Rogers" };
+    int managerLen = managers.Length;
+    string[] officers = { "Scooby Doo", "Astro Jetson", "Scrappy Doo" };
+    int officerLen = officers.Length;
+    var x = 0;
+}
+
+<hr />
+<div class="jumbotron bg-danger">
+    <img src="~/Images/detectives.jpg" alt="xyz detectives" class="float-right rounded-circle mt-0 mb-5 img-thumbnail col-md-6" style="box-shadow:1px 1px black" />
+    <h1 class="col-sm-1">Meet the Team!</h1>
+    
+
+</div>
+<table class="table bg-dark text-white table-striped ">
+    <tr><th><h2><i class='fas fa-dungeon' style='font-size:48px;color:white'></i>   XYZ Detective Agency Staff    <i class='fas fa-dungeon' style='font-size:48px;color:white'></i></h2></th></tr>
+    @for (x = 0; x < staffLen; x++)
+    {
+        <tr><td>@staff[x]</td></tr>
+    }
+</table>
+<hr />
+
+<table class="table table-cell table-hover bg-white text-black ">
+    <tr><th><h2>XYZ Detective Agency Managers</h2></th></tr>
+    @foreach (var person in managers)
+    {
+        <tr><td>@person</td></tr>
+    }
+</table>
+<hr />
+<table class="table bg-dark text-white table-striped ">
+    <tr><td><h2>XYZ Detective Agency Corporate Office</h2></td></tr>
+    @{
+        x = 0;
+        while (x < officerLen)
+        {
+                <tr><td>@officers[x]</td></tr>
+            x += 1;
+        }
+    }
+</table>
+<hr />

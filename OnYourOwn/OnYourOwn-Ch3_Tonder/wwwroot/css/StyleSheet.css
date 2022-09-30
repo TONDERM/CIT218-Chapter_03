@@ -1,0 +1,29 @@
+﻿
+@font-face {
+    font-family: 'gremlin';
+    src: url('../fonts/GREMLINS.TTF');
+}
+
+img {
+    box-shadow: 1px 1px 1px black;
+}
+
+body {
+    padding: 1em;
+    font-family:gremlin;
+}
+
+#NoGrem {
+    font-family: 'Black Brutal';
+    font-size: 20px;
+}
+
+h1, h2 {
+    color: red;
+}
+
+label {
+    display: inline-block;
+    width: 10em;
+    padding-right: 1em;
+}
